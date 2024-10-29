@@ -1,0 +1,9 @@
+server:
+  port: 8083
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://root:example@mongodb:27017/orderdb
+  application:
+    name: order-service
