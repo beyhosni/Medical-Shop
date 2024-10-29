@@ -1,0 +1,10 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://root:example@mongodb:27017/authdb
+  application:
+    name: auth-service
+

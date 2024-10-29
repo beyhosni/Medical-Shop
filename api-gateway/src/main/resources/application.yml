@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+# Configurations pour Spring Cloud Gateway
+spring.cloud.gateway:
+  routes:
+    - id: auth-service
+      uri: lb://auth-service
+      predicates:
+        - Path=/auth/**
+    - id: product-service
+      uri: lb://product-service
+      predicates:
+        - Path=/products/**
+    - id: order-service
+      uri: lb://order-service
+      predicates:
+        - Path=/orders/**
+    - id: inventory-service
+      uri: lb://inventory-service
+      predicates:
+        - Path=/inventory/**
+    - id: notification-service
+      uri: lb://notification-service
+      predicates:
+        - Path=/notifications/**
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    prefer-ip-address: true
