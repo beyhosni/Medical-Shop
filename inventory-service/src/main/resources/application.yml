@@ -1,0 +1,11 @@
+server:
+  port: 8084
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/inventorydb
+
+# Configuration pour Kafka (si vous l'utilisez pour la synchronisation avec d'autres services)
+kafka:
+  bootstrap-servers: localhost:9092
