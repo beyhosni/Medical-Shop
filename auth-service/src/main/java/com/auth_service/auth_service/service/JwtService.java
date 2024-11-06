@@ -1,14 +1,15 @@
 package com.auth_service.auth_service.service;
 
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.security.Keys;
+import java.util.Date;
+import java.util.function.Function;
+
 import javax.crypto.SecretKey;
+
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import io.jsonwebtoken.Claims;
-import java.util.function.Function;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
 
 @Service
 public class JwtService {
